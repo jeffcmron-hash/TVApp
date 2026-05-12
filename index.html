@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="TheTVApp streaming platform guide for online viewers. Free live TV – sports, news, movies, entertainment. Browser-based, no signup, multi-device.">
+  <title>TheTVApp | Streaming Platform Guide for Online Viewers 2026</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --brand-deep: #0A0E1A;
+      --brand-primary: #E11D48;
+      --brand-primary-dark: #BE123C;
+      --brand-gold: #FBBF24;
+      --brand-gold-dark: #F59E0B;
+      --brand-card: #111827;
+      --border-dim: #1F2937;
+      --text-light: #F9FAFB;
+      --text-muted: #9CA3AF;
+      --shadow-card: 0 20px 35px -12px rgba(0, 0, 0, 0.6);
+      --gradient-hero: linear-gradient(135deg, #0A0E1A 0%, #111827 100%);
+      --gradient-accent: linear-gradient(90deg, #E11D48, #FBBF24);
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
+      background: #0A0E1A;
+      color: var(--text-light);
+      line-height: 1.55;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 48px;
+    }
+
+    /* header one line */
+    .header {
+      background: rgba(10, 14, 26, 0.98);
+      backdrop-filter: blur(12px);
+      padding: 14px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 2px solid var(--brand-primary);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      gap: 32px;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-icon {
+      background: var(--gradient-accent);
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: white;
+      box-shadow: 0 0 14px rgba(225,29,72,0.5);
+    }
+
+    .brand-text {
+      font-size: 1.7rem;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      background: linear-gradient(135deg, #FFFFFF, #FBBF24);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #E5E7EB;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--brand-gold); transform: translateY(-1px); }
+
+    .portal-btn {
+      background: var(--brand-primary);
+      color: white !important;
+      padding: 8px 26px;
+      border-radius: 40px;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(225,29,72,0.4);
+    }
+    .portal-btn:hover { background: #BE123C; color: white !important; }
+
+    /* hero */
+    .hero {
+      background: var(--gradient-hero);
+      padding: 70px 0 60px;
+      border-bottom: 1px solid var(--border-dim);
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(251,191,36,0.15);
+      color: var(--brand-gold);
+      padding: 6px 24px;
+      border-radius: 60px;
+      font-weight: 700;
+      font-size: 0.8rem;
+      margin-bottom: 24px;
+      border-left: 3px solid var(--brand-primary);
+    }
+
+    .hero h1 {
+      font-size: 54px;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -1.2px;
+      margin-bottom: 28px;
+      background: linear-gradient(130deg, #FFFFFF, #FBBF24);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: #D1D5DB;
+      margin-bottom: 18px;
+      max-width: 88%;
+    }
+
+    .highlight-link {
+      color: var(--brand-gold);
+      font-weight: 800;
+      text-decoration: none;
+      border-bottom: 2px solid var(--brand-primary);
+      transition: 0.2s;
+      background: rgba(251,191,36,0.1);
+      padding: 0 6px;
+      border-radius: 8px;
+    }
+    .highlight-link:hover { color: #FDE68A; border-bottom-color: #E11D48; background: rgba(251,191,36,0.2);}
+
+    .stats-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 32px;
+    }
+    .stat-chip {
+      background: #111827;
+      border-radius: 80px;
+      padding: 8px 28px;
+      font-weight: 600;
+      border: 1px solid #1F2937;
+      color: var(--brand-gold);
+      font-size: 0.85rem;
+    }
+
+    /* sections */
+    .section {
+      padding: 70px 0 40px;
+      border-bottom: 1px solid var(--border-dim);
+    }
+    .section:last-of-type { border-bottom: none; }
+
+    .section h2 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+      color: #FFFFFF;
+    }
+    .section h2:after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      width: 70px;
+      height: 4px;
+      background: var(--gradient-accent);
+      border-radius: 4px;
+    }
+    .section h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 32px 0 16px;
+      color: var(--brand-gold);
+    }
+    .section p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 1.2rem;
+      line-height: 1.7;
+    }
+
+    /* features grid */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      margin: 44px 0 20px;
+    }
+    .feature-card {
+      background: var(--brand-card);
+      border-radius: 28px;
+      padding: 30px 26px;
+      transition: 0.25s;
+      border: 1px solid var(--border-dim);
+      box-shadow: var(--shadow-card);
+    }
+    .feature-card:hover { transform: translateY(-8px); border-color: var(--brand-gold); box-shadow: 0 28px 38px -12px rgba(225,29,72,0.2);}
+    .feature-icon { font-size: 2.5rem; margin-bottom: 20px; }
+
+    /* features table */
+    .table-wrapper {
+      overflow-x: auto;
+      margin: 40px 0;
+      background: #111827;
+      border-radius: 28px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.4);
+      border: 1px solid var(--border-dim);
+    }
+    .feature-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .feature-table th {
+      background: #0A0E1A;
+      color: var(--brand-gold);
+      padding: 18px 20px;
+      font-weight: 700;
+      border-bottom: 2px solid #E11D48;
+    }
+    .feature-table td {
+      padding: 16px 20px;
+      border-bottom: 1px solid #1F2937;
+      color: #D1D5DB;
+    }
+
+    /* advantages grid */
+    .advantages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+      background: #111827;
+      border-radius: 32px;
+      padding: 36px;
+      margin: 40px 0;
+    }
+    .advantage-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 600;
+      color: #E5E7EB;
+    }
+
+    /* limitations + comparison duo */
+    .insight-duo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin: 40px 0;
+    }
+    .insight-card {
+      background: var(--brand-card);
+      border-radius: 32px;
+      padding: 30px 32px;
+      box-shadow: var(--shadow-card);
+      border: 1px solid var(--border-dim);
+    }
+
+    .points-list {
+      background: #111827;
+      border-radius: 28px;
+      padding: 32px;
+      margin: 32px 0;
+    }
+    .points-list li {
+      margin-bottom: 12px;
+      margin-left: 20px;
+      color: #D1D5DB;
+    }
+
+    .cta-container {
+      background: linear-gradient(135deg, #0D1222, #181E30);
+      border: 1px solid var(--border-dim);
+      padding: 56px 48px;
+      border-radius: 48px;
+      text-align: center;
+      margin: 60px 0;
+    }
+    .cta-container a {
+      background: var(--brand-primary);
+      color: white;
+      padding: 14px 44px;
+      border-radius: 60px;
+      text-decoration: none;
+      font-weight: 800;
+      display: inline-block;
+      margin-top: 20px;
+      transition: 0.2s;
+      box-shadow: 0 8px 20px rgba(225,29,72,0.4);
+    }
+    .cta-container a:hover { background: #BE123C; transform: translateY(-3px);}
+
+    /* footer */
+    .footer {
+      background: #0A0E1A;
+      color: #9CA3AF;
+      padding: 60px 0 32px;
+      margin-top: 40px;
+      border-top: 1px solid #1F2937;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .social-icons {
+      display: flex;
+      gap: 18px;
+      margin-top: 28px;
+    }
+    .social-icons a {
+      background: rgba(251,191,36,0.12);
+      width: 46px;
+      height: 46px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      text-decoration: none;
+      color: #FBBF24;
+      transition: 0.2s;
+    }
+    .social-icons a:hover { background: var(--brand-primary); color: white; transform: translateY(-4px);}
+    .footer-col h4 { color: #FBBF24; margin-bottom: 20px; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 12px; }
+    .footer-col a { color: #9CA3AF; text-decoration: none; }
+    .footer-col a:hover { color: var(--brand-gold); padding-left: 5px; }
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid rgba(251,191,36,0.2);
+      padding-top: 28px;
+    }
+
+    @media (max-width: 1000px) {
+      .container { padding: 0 28px; }
+      .hero h1 { font-size: 40px; }
+      .hero p { max-width: 100%; }
+      .insight-duo { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+    }
+    @media (max-width: 680px) {
+      .header-container { flex-direction: column; gap: 14px; }
+      .nav-links { flex-wrap: wrap; justify-content: center; }
+      .hero h1 { font-size: 32px; }
+      .section h2:after { left: 50%; transform: translateX(-50%); width: 60px; }
+      .section h2 { display: block; text-align: center; }
+      .footer-grid { grid-template-columns: 1fr; text-align: center; }
+      .social-icons { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-container">
+    <div class="logo-area">
+      <div class="brand-icon">📺</div>
+      <span class="brand-text">TheTVApp</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#advantages">Advantages</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#safety">Safety</a></li>
+      <li><a href="https://tvapp.us/" class="portal-btn" target="_blank" rel="noopener">Watch Live →</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <span class="hero-badge">📡 Free Live TV • Sports • News • No Signup</span>
+      <h1>TheTVApp Streaming Platform Guide for Online Viewers</h1>
+      <p>Online streaming platforms are changing the entertainment industry at a very fast pace. People now prefer internet-based viewing because it offers flexibility, convenience, and instant access to content. Traditional television services are gradually losing popularity as users move toward digital platforms that work across multiple devices. One platform often discussed in this growing market is <a href="https://tvapp.us/" target="_blank" rel="noopener" class="highlight-link">The TV App</a>.</p>
+      <p>TheTVApp is known for providing live television streaming directly through a browser. Users can access sports channels, entertainment content, movies, and news broadcasts without depending on cable connections or expensive subscriptions. The platform is designed to deliver a simple viewing experience for users who want quick entertainment access.</p>
+      <p>This article explores TheTVApp from a new perspective, including its working system, major features, user experience, advantages, limitations, and importance in the modern streaming ecosystem.</p>
+      <div class="stats-row">
+        <span class="stat-chip">📺 500+ Live Channels</span>
+        <span class="stat-chip">⚽ Sports • News • Movies</span>
+        <span class="stat-chip">📱 Mobile & Desktop</span>
+        <span class="stat-chip">🚀 No Registration</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- What is + How It Works -->
+    <section class="section">
+      <h2>What is TheTVApp?</h2>
+      <p>TheTVApp is an online live-streaming platform that allows viewers to watch television channels through the internet. Unlike traditional broadcasting systems, it does not require satellite equipment or cable installations. The platform works mainly through web browsers, making it accessible on mobile phones, laptops, tablets, and smart TVs. Users can open the website, choose a channel, and begin streaming within seconds. TheTVApp focuses on live entertainment rather than downloadable content. It is commonly used for watching sports events, live news updates, movies, and television programs in real time. Its lightweight structure and simple navigation make it attractive for users who prefer straightforward streaming experiences.</p>
+      
+      <h3 id="how-it-works">How TheTVApp Operates</h3>
+      <p>TheTVApp uses online streaming technology to connect viewers with live broadcast sources available on the internet. When a user selects a channel, the platform loads the stream through an integrated web player. Since the system works directly inside the browser, there is no need for additional software installation. This reduces complexity and improves accessibility for different types of users. Channels are organized into categories, allowing visitors to navigate content easily. The streaming process depends on internet speed and server performance for smooth playback. The platform is designed to prioritize quick loading and easy access instead of advanced customization features.</p>
+    </section>
+
+    <!-- Key Features Grid -->
+    <section class="section" id="features">
+      <h2>Key Features of TheTVApp</h2>
+      <div class="features-grid">
+        <div class="feature-card"><div class="feature-icon">🌐</div><h3>Browser-Based Streaming</h3><p>Live TV directly in your browser – no installation needed.</p></div>
+        <div class="feature-card"><div class="feature-icon">🎯</div><h3>Multiple Content Categories</h3><p>Sports, movies, entertainment, and news available.</p></div>
+        <div class="feature-card"><div class="feature-icon">📱</div><h3>Cross-Device Support</h3><p>Works on smartphones, tablets, laptops, and smart TVs.</p></div>
+        <div class="feature-card"><div class="feature-icon">🔓</div><h3>No Registration Required</h3><p>No login or account creation – start streaming instantly.</p></div>
+        <div class="feature-card"><div class="feature-icon">🎨</div><h3>Simple Interface</h3><p>Lightweight, beginner-friendly design with fast navigation.</p></div>
+        <div class="feature-card"><div class="feature-icon">⚡</div><h3>Quick Channel Switching</h3><p>Smooth and fast switching between channels.</p></div>
+      </div>
+    </section>
+
+    <!-- Features Table -->
+    <section class="section">
+      <h2>TheTVApp Features Table</h2>
+      <div class="table-wrapper">
+        <table class="feature-table">
+          <thead><tr><th>Feature Category</th><th>Details</th></tr></thead>
+          <tbody>
+            <tr><td>Platform Type</td><td>Online live TV streaming</td>
+            <tr>
+            <tr><td>Access Method</td><td>Browser-based</td>
+            </tr>
+            <tr><td>Content Categories</td><td>Sports, news, movies, entertainment</td>
+            </tr>
+            <tr><td>Device Support</td><td>Mobile, desktop, smart TV</td>
+            </tr>
+            <tr><td>Registration</td><td>Not required</td>
+            </tr>
+            <tr><td>Installation</td><td>No download needed</td>
+            </tr>
+            <tr><td>Streaming Focus</td><td>Live television channels</td>
+            </tr>
+            <tr><td>User Interface</td><td>Simple and fast</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <!-- Second link placed naturally mid content -->
+      <p>For additional live TV streaming alternatives and expanded channel collections, viewers can also explore <a href="https://live-tv-guide--kerrpamela2mayy.replit.app" target="_blank" rel="noopener" class="highlight-link">Live TV Guide – Interactive Streaming Hub</a>, which offers a curated selection of live channels and real-time broadcasting from around the world. Comparing different platforms helps users find the best streaming experience suited to their viewing preferences.</p>
+    </section>
+
+    <!-- Entertainment Options + Why Users Choose -->
+    <section class="section">
+      <h2>Entertainment Options on TheTVApp</h2>
+      <p>TheTVApp offers multiple entertainment categories for different types of viewers. Sports streaming is one of the most popular sections. Users often visit the platform to watch football, basketball, cricket, UFC, and other live sports events. Movie channels are also available for viewers who enjoy cinematic entertainment. The entertainment category usually includes television programs, reality shows, and variety content. News channels help users stay updated with global and regional events. Depending on availability, some additional categories may also include lifestyle or children's content. This variety helps attract a broad audience with different viewing preferences.</p>
+      
+      <h3>Why Users Choose TheTVApp</h3>
+      <p>Many people prefer TheTVApp because it removes many of the barriers associated with traditional television services. Cable subscriptions can be expensive and require hardware installations, while browser-based streaming offers easier access. The platform is also popular because of its flexibility. Users can watch content from different locations and devices without being restricted to a single television setup. Another major reason is convenience. People can start streaming instantly without creating accounts or downloading applications. The combination of simplicity and accessibility makes TheTVApp appealing to modern audiences.</p>
+    </section>
+
+    <!-- Benefits + Highlights -->
+    <section class="section" id="advantages">
+      <h2>Benefits of TheTVApp</h2>
+      <div class="advantages-grid">
+        <div class="advantage-item"><span>✅</span> Free access to live TV channels</div>
+        <div class="advantage-item"><span>✅</span> Works on multiple devices for flexible viewing</div>
+        <div class="advantage-item"><span>✅</span> No registration or installation required</div>
+        <div class="advantage-item"><span>✅</span> Easy to understand and navigate</div>
+        <div class="advantage-item"><span>✅</span> Quick loading and smooth channel switching</div>
+        <div class="advantage-item"><span>✅</span> Instant access to live broadcasts and sports</div>
+      </div>
+
+      <h3>Important Highlights List</h3>
+      <div class="points-list">
+        <ul style="list-style-type: none; padding-left: 0;">
+          <li>✅ TheTVApp streams live television through browsers</li>
+          <li>✅ Supports sports, entertainment, movies, and news</li>
+          <li>✅ No installation or registration required</li>
+          <li>✅ Compatible with smartphones and smart TVs</li>
+          <li>✅ Provides real-time live streaming access</li>
+          <li>✅ Designed for simple navigation and fast loading</li>
+          <li>✅ Works through internet connections only</li>
+          <li>✅ Focuses on flexible online entertainment</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Limitations + Comparison -->
+    <section class="section">
+      <h2>Limitations & Comparison</h2>
+      <div class="insight-duo">
+        <div class="insight-card"><h3>⚠️ Limitations of TheTVApp</h3><p>• Streaming quality depends on internet speed<br>• Buffering may occur during peak traffic<br>• Advertisements may appear<br>• Some channels may become temporarily unavailable<br>• Source changes can affect stability</p></div>
+        <div class="insight-card"><h3>📺 TheTVApp vs Cable Television</h3><p>Cable TV requires subscriptions, hardware, and fixed locations. TheTVApp removes these barriers with internet streaming. Traditional TV offers stable quality but lacks portability. TheTVApp provides flexibility – watch from anywhere. Cost is another difference: cable involves recurring payments, while browser-based platforms focus on accessible entertainment.</p></div>
+      </div>
+    </section>
+
+    <!-- Modern Streaming Culture + Safety -->
+    <section class="section" id="safety">
+      <h2>TheTVApp and Modern Streaming Culture</h2>
+      <p>TheTVApp reflects the changing behavior of modern viewers. Today, users prefer instant entertainment that can be accessed from anywhere. Traditional television systems depend on fixed schedules and hardware setups, while streaming platforms provide greater flexibility. Mobile viewing has also become increasingly popular, especially among younger audiences. TheTVApp supports this digital shift by delivering browser-based streaming across multiple devices. This approach matches the expectations of users who value speed and convenience. The platform highlights how online entertainment continues to replace traditional broadcasting systems.</p>
+      
+      <h3>Safe Streaming Tips</h3>
+      <p>Users should always practice safe browsing habits while using online streaming services. It is important to avoid clicking suspicious ads or downloading unknown files. Using updated browsers and antivirus software can improve security during streaming sessions. A stable internet connection also helps maintain better playback quality. Browser-based viewing is generally safer than downloading external applications from unknown sources.</p>
+    </section>
+
+    <!-- Future + Conclusion -->
+    <section class="section">
+      <h2>Future of TheTVApp</h2>
+      <p>The future of TheTVApp depends on advancements in internet technology and streaming demand. As digital entertainment continues to grow, platforms like this are expected to attract more users. Future improvements may include faster loading, improved stream quality, and better user interfaces. Competition in the streaming industry will also continue increasing as new platforms emerge. To remain successful, TheTVApp will need to adapt to changing user expectations and technological developments.</p>
+    </section>
+
+    <section class="section">
+      <h2>Conclusion</h2>
+      <p>TheTVApp is a browser-based streaming platform that offers live access to sports, movies, entertainment, and news channels through internet technology. Its simple interface, device compatibility, and no-registration system make it useful for users who want fast and flexible entertainment access. Although it has some limitations such as advertisements and occasional buffering, it still serves as a practical alternative to traditional television systems. TheTVApp represents the modern evolution of online entertainment, where accessibility and convenience play a major role in user preferences. Overall, the platform demonstrates how digital streaming continues to reshape the future of media consumption across different devices and audiences.</p>
+    </section>
+
+    <!-- CTA Banner -->
+    <div class="cta-container">
+      <h3>📺 Start Watching Live TV Now – Free & No Signup</h3>
+      <p>Sports, news, movies, entertainment – hundreds of live channels. Stream instantly on any device.</p>
+      <a href="https://tvapp.us/" target="_blank" rel="noopener">Visit The TV App →</a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3 style="color:#FBBF24;">📺 TheTVApp</h3>
+        <p>Free live TV streaming platform – sports, news, movies, entertainment. Watch anywhere, on any device. No subscription required.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="Reddit">🔴</a>
+          <a href="#" aria-label="Discord">💬</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Live TV</h4><ul><li><a href="#">Sports</a></li><li><a href="#">News</a></li><li><a href="#">Entertainment</a></li><li><a href="#">Movies</a></li></ul></div>
+      <div class="footer-col"><h4>Resources</h4><ul><li><a href="https://tvapp.us/">The TV App</a></li><li><a href="https://live-tv-guide--kerrpamela2mayy.replit.app">Live TV Guide</a></li><li><a href="#">Streaming Guide</a></li><li><a href="#">Safety Tips</a></li></ul></div>
+      <div class="footer-col"><h4>Info</h4><ul><li><a href="#">Disclaimer</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Contact</a></li><li><a href="#">Report Issue</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 TheTVApp – Streaming Platform Guide for Online Viewers. For informational purposes only. <a href="https://tvapp.us/" style="color:#FBBF24;">Visit official site</a> for live streaming.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
